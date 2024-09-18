@@ -1,0 +1,77 @@
+slice_name: MoE Scholarships
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 6__table
+  viz_type: big_number_total
+  slice_id: 11
+  metric:
+    aggregate: SUM
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: available_balance
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 78
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: DOUBLE PRECISION
+      type_generic: 0
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(available_balance)
+    optionName: metric_f4v5wgxtnum_tlo8jrfhkde
+    sqlExpression: null
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_loqibqt5orq_5f2yfeuklcv
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: created_at
+  - clause: WHERE
+    comparator: MOW_FS_ACC_1
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_yjr1cpl9ai_ns4g78izq4a
+    isExtra: false
+    isNew: false
+    operator: ==
+    operatorId: EQUALS
+    sqlExpression: null
+    subject: account_number
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting:
+  - column: SUM(available_balance)
+    colorScheme: '#BC9501'
+    operator: '>'
+    targetValue: 0
+  extra_form_data: {}
+  dashboards:
+  - 4
+query_context: '{"datasource":{"id":6,"type":"table"},"force":false,"queries":[{"filters":[{"col":"created_at","op":"TEMPORAL_RANGE","val":"No
+  filter"},{"col":"account_number","op":"==","val":"MOW_FS_ACC_1"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"available_balance","description":null,"expression":null,"filterable":true,"groupby":true,"id":78,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(available_balance)","optionName":"metric_f4v5wgxtnum_tlo8jrfhkde","sqlExpression":null}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"6__table","viz_type":"big_number_total","slice_id":11,"metric":{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"available_balance","description":null,"expression":null,"filterable":true,"groupby":true,"id":78,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"DOUBLE
+  PRECISION","type_generic":0,"verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":false,"label":"SUM(available_balance)","optionName":"metric_f4v5wgxtnum_tlo8jrfhkde","sqlExpression":null},"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_loqibqt5orq_5f2yfeuklcv","isExtra":false,"isNew":false,"operator":"TEMPORAL_RANGE","sqlExpression":null,"subject":"created_at"},{"clause":"WHERE","comparator":"MOW_FS_ACC_1","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_yjr1cpl9ai_ns4g78izq4a","isExtra":false,"isNew":false,"operator":"==","operatorId":"EQUALS","sqlExpression":null,"subject":"account_number"}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","conditional_formatting":[{"column":"SUM(available_balance)","colorScheme":"#BC9501","operator":">","targetValue":0}],"extra_form_data":{},"dashboards":[4],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: e012b149-cd94-4022-a0a9-77178b3e046c
+version: 1.0.0
+dataset_uuid: 6494a5aa-d996-4e31-88dd-0bcac329aca3

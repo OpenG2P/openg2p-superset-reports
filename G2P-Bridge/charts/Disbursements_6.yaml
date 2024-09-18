@@ -1,0 +1,51 @@
+slice_name: Disbursements
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 4__table
+  viz_type: table
+  slice_id: 6
+  query_mode: raw
+  groupby:
+  - disbursement_id
+  - benefit_program_mnemonic
+  - mis_reference_number
+  - cycle_code_mnemonic
+  - beneficiary_name
+  - disbursement_amount
+  time_grain_sqla: P1D
+  temporal_columns_lookup: {}
+  all_columns:
+  - benefit_program_mnemonic
+  - disbursement_id
+  - mis_reference_number
+  - cycle_code_mnemonic
+  - beneficiary_name
+  - disbursement_amount
+  percent_metrics: []
+  adhoc_filters: []
+  order_by_cols: []
+  server_pagination: true
+  row_limit: 1000
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    disbursement_amount:
+      d3NumberFormat: $,.2f
+      currencyFormat:
+        symbolPosition: prefix
+        symbol: INR
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 3
+query_context: '{"datasource":{"id":4,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["benefit_program_mnemonic","disbursement_id","mis_reference_number","cycle_code_mnemonic","beneficiary_name","disbursement_amount"],"orderby":[],"annotation_layers":[],"row_limit":10,"row_offset":0,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]},{"filters":[],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["benefit_program_mnemonic","disbursement_id","mis_reference_number","cycle_code_mnemonic","beneficiary_name","disbursement_amount"],"orderby":[],"annotation_layers":[],"row_limit":0,"row_offset":0,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[],"is_rowcount":true}],"form_data":{"datasource":"4__table","viz_type":"table","slice_id":6,"query_mode":"raw","groupby":["disbursement_id","benefit_program_mnemonic","mis_reference_number","cycle_code_mnemonic","beneficiary_name","disbursement_amount"],"time_grain_sqla":"P1D","temporal_columns_lookup":{},"all_columns":["benefit_program_mnemonic","disbursement_id","mis_reference_number","cycle_code_mnemonic","beneficiary_name","disbursement_amount"],"percent_metrics":[],"adhoc_filters":[],"order_by_cols":[],"server_pagination":true,"row_limit":1000,"server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"column_config":{"disbursement_amount":{"d3NumberFormat":"$,.2f","currencyFormat":{"symbolPosition":"prefix","symbol":"INR"}}},"conditional_formatting":[],"extra_form_data":{},"dashboards":[3],"force":false,"result_format":"json","result_type":"full","include_time":false},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 61500af1-03ec-4914-8d8c-fcc544d00fe7
+version: 1.0.0
+dataset_uuid: 0ea6a884-f82e-44f1-98c9-b6ef8c96e05b

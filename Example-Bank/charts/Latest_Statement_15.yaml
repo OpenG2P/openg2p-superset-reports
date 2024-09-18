@@ -1,0 +1,46 @@
+slice_name: Latest Statement
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 8__table
+  viz_type: table
+  slice_id: 15
+  query_mode: raw
+  groupby:
+  - account_statement_lob
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    account_statement_date: true
+    created_at: true
+    updated_at: true
+  all_columns:
+  - id
+  - account_statement_lob
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: account_statement_date
+  order_by_cols:
+  - '["created_at", false]'
+  row_limit: '1'
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  extra_form_data: {}
+  dashboards:
+  - 4
+query_context: '{"datasource":{"id":8,"type":"table"},"force":false,"queries":[{"filters":[{"col":"account_statement_date","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["id","account_statement_lob"],"orderby":[["created_at",false]],"annotation_layers":[],"row_limit":1,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"8__table","viz_type":"table","slice_id":15,"query_mode":"raw","groupby":["account_statement_lob"],"time_grain_sqla":"P1D","temporal_columns_lookup":{"account_statement_date":true,"created_at":true,"updated_at":true},"all_columns":["id","account_statement_lob"],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","expressionType":"SIMPLE","operator":"TEMPORAL_RANGE","subject":"account_statement_date"}],"order_by_cols":["[\"created_at\",
+  false]"],"row_limit":"1","server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"extra_form_data":{},"dashboards":[4],"force":false,"result_format":"json","result_type":"full","include_time":false},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 40e0bcdf-807b-4e2f-8837-be96107a7c4a
+version: 1.0.0
+dataset_uuid: 893b6ecc-41b3-495f-b964-78701544828e

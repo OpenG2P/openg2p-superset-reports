@@ -1,0 +1,242 @@
+dashboard_title: Bridge Dashboard
+description: null
+css: ''
+slug: null
+certified_by: ''
+certification_details: ''
+published: true
+uuid: 613df9a9-98ad-4d7e-93fc-6d458aff2cca
+position:
+  CHART-explore-2-1:
+    children: []
+    id: CHART-explore-2-1
+    meta:
+      chartId: 2
+      height: 34
+      sliceName: Disbursement Envelopes - Beneficiaries
+      uuid: fb76c53e-37ee-47a7-bf95-6407932748ca
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XBRbNCe8nJ
+    type: CHART
+  CHART-explore-3-1:
+    children: []
+    id: CHART-explore-3-1
+    meta:
+      chartId: 3
+      height: 34
+      sliceName: Disbursement Envelopes - Amount
+      uuid: 7ff29b83-ae7d-4138-ab52-c69aca912b29
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-XBRbNCe8nJ
+    type: CHART
+  CHART-explore-4-1:
+    children: []
+    id: CHART-explore-4-1
+    meta:
+      chartId: 4
+      height: 18
+      sliceName: Total Beneficiaries
+      uuid: 0f8e34c1-70ff-4183-9cfd-180e6f4a7629
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Y4ZFphI949
+    type: CHART
+  CHART-explore-5-1:
+    children: []
+    id: CHART-explore-5-1
+    meta:
+      chartId: 5
+      height: 18
+      sliceName: Total Disbursement Amount
+      sliceNameOverride: Amount Disbursed
+      uuid: d3210fd9-17db-4bee-b0eb-9ce09305947f
+      width: 3
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Y4ZFphI949
+    type: CHART
+  CHART-explore-6-1:
+    children: []
+    id: CHART-explore-6-1
+    meta:
+      chartId: 6
+      height: 50
+      sliceName: Disbursements
+      uuid: 61500af1-03ec-4914-8d8c-fcc544d00fe7
+      width: 12
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-rW1g_UtOz
+    type: CHART
+  CHART-explore-7-1:
+    children: []
+    id: CHART-explore-7-1
+    meta:
+      chartId: 7
+      height: 18
+      sliceName: Shipped to Bank
+      uuid: d23184c6-0ba4-4eb5-bfa2-062745789971
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Y4ZFphI949
+    type: CHART
+  CHART-explore-8-1:
+    children: []
+    id: CHART-explore-8-1
+    meta:
+      chartId: 8
+      height: 18
+      sliceName: Reconciled
+      uuid: 19b6be74-674b-4321-96f7-28912d1016f5
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Y4ZFphI949
+    type: CHART
+  CHART-explore-9-1:
+    children: []
+    id: CHART-explore-9-1
+    meta:
+      chartId: 9
+      height: 18
+      sliceName: Reversed
+      uuid: c20d4b4e-7323-4d21-a9d7-abfbd9e350f9
+      width: 2
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - ROW-Y4ZFphI949
+    type: CHART
+  DASHBOARD_VERSION_KEY: v2
+  GRID_ID:
+    children:
+    - ROW-Y4ZFphI949
+    - ROW-XBRbNCe8nJ
+    - ROW-rW1g_UtOz
+    id: GRID_ID
+    parents:
+    - ROOT_ID
+    type: GRID
+  HEADER_ID:
+    id: HEADER_ID
+    meta:
+      text: Bridge Dashboard
+    type: HEADER
+  ROOT_ID:
+    children:
+    - GRID_ID
+    id: ROOT_ID
+    type: ROOT
+  ROW-XBRbNCe8nJ:
+    children:
+    - CHART-explore-2-1
+    - CHART-explore-3-1
+    id: ROW-XBRbNCe8nJ
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-Y4ZFphI949:
+    children:
+    - CHART-explore-4-1
+    - CHART-explore-5-1
+    - CHART-explore-7-1
+    - CHART-explore-8-1
+    - CHART-explore-9-1
+    id: ROW-Y4ZFphI949
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+  ROW-rW1g_UtOz:
+    children:
+    - CHART-explore-6-1
+    id: ROW-rW1g_UtOz
+    meta:
+      '0': ROOT_ID
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    type: ROW
+metadata:
+  chart_configuration:
+    '2':
+      id: 2
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 3
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+    '3':
+      id: 3
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 2
+        - 4
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+    '6':
+      id: 6
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 2
+        - 3
+        - 4
+        - 5
+        - 7
+        - 8
+        - 9
+  global_chart_configuration:
+    scope:
+      rootPath:
+      - ROOT_ID
+      excluded: []
+    chartsInScope:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+  color_scheme: ''
+  refresh_frequency: 0
+  shared_label_colors:
+    '3': '#1FA8C9'
+    SUM(total_disbursement_amount): '#29696B'
+  color_scheme_domain: []
+  expanded_slices: {}
+  label_colors: {}
+  timed_refresh_immune_slices: []
+  cross_filters_enabled: true
+  default_filters: '{}'
+version: 1.0.0
