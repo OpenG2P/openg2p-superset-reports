@@ -1,0 +1,54 @@
+slice_name: Total Beneficiaries
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 2__table
+  viz_type: big_number_total
+  metric:
+    expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2024-09-17T05:35:39.615901'
+      column_name: number_of_beneficiaries
+      created_on: '2024-09-17T05:35:39.615898'
+      description: null
+      expression: null
+      extra: null
+      filterable: true
+      groupby: true
+      id: 14
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: INTEGER
+      type_generic: 0
+      uuid: 8ce9bfd8-43df-4251-86aa-23c4d2ec6cd2
+      verbose_name: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: SUM(number_of_beneficiaries)
+    optionName: metric_smcbyigz01_gtes6xph7k8
+  adhoc_filters:
+  - clause: WHERE
+    subject: receipt_time_stamp
+    operator: TEMPORAL_RANGE
+    comparator: No filter
+    expressionType: SIMPLE
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 3
+query_context: '{"datasource":{"id":2,"type":"table"},"force":false,"queries":[{"filters":[{"col":"receipt_time_stamp","op":"TEMPORAL_RANGE","val":"No
+  filter"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":[{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2024-09-17T05:35:39.615901","column_name":"number_of_beneficiaries","created_on":"2024-09-17T05:35:39.615898","description":null,"expression":null,"extra":null,"filterable":true,"groupby":true,"id":14,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"INTEGER","type_generic":0,"uuid":"8ce9bfd8-43df-4251-86aa-23c4d2ec6cd2","verbose_name":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(number_of_beneficiaries)","optionName":"metric_smcbyigz01_gtes6xph7k8"}],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"2__table","viz_type":"big_number_total","metric":{"expressionType":"SIMPLE","column":{"advanced_data_type":null,"changed_on":"2024-09-17T05:35:39.615901","column_name":"number_of_beneficiaries","created_on":"2024-09-17T05:35:39.615898","description":null,"expression":null,"extra":null,"filterable":true,"groupby":true,"id":14,"is_active":true,"is_dttm":false,"python_date_format":null,"type":"INTEGER","type_generic":0,"uuid":"8ce9bfd8-43df-4251-86aa-23c4d2ec6cd2","verbose_name":null},"aggregate":"SUM","sqlExpression":null,"datasourceWarning":false,"hasCustomLabel":false,"label":"SUM(number_of_beneficiaries)","optionName":"metric_smcbyigz01_gtes6xph7k8"},"adhoc_filters":[{"clause":"WHERE","subject":"receipt_time_stamp","operator":"TEMPORAL_RANGE","comparator":"No
+  filter","expressionType":"SIMPLE"}],"header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","extra_form_data":{},"dashboards":[3],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 0f8e34c1-70ff-4183-9cfd-180e6f4a7629
+version: 1.0.0
+dataset_uuid: 1db6e6bb-a67f-44e2-9614-70f3223921f6

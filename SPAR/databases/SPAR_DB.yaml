@@ -1,0 +1,13 @@
+database_name: SPAR DB
+sqlalchemy_uri: postgresql+psycopg2://sparuser:XXXXXXXXXX@10.42.1.156:5432/spardb
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: 7c9d9ae4-1669-4c91-9042-8b738aba997d
+version: 1.0.0

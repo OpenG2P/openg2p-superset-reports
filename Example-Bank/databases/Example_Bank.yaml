@@ -1,0 +1,13 @@
+database_name: Example Bank
+sqlalchemy_uri: postgresql+psycopg2://bankuser:XXXXXXXXXX@openg2p-example-bank-postgresql:5432/example_bank_db
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: 88b927db-d776-4d52-aac6-3b4b98eac24a
+version: 1.0.0

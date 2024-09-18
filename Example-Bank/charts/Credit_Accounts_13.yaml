@@ -1,0 +1,68 @@
+slice_name: Credit Accounts
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 6__table
+  viz_type: table
+  slice_id: 13
+  query_mode: raw
+  groupby: []
+  time_grain_sqla: P1D
+  temporal_columns_lookup:
+    created_at: true
+    updated_at: true
+  all_columns:
+  - account_number
+  - account_holder_name
+  - available_balance
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_hudlkrcud1_5i4rcme32um
+    isExtra: false
+    isNew: false
+    operator: TEMPORAL_RANGE
+    sqlExpression: null
+    subject: created_at
+  - clause: WHERE
+    comparator:
+    - MOW_FS_ACC_1
+    datasourceWarning: false
+    expressionType: SIMPLE
+    filterOptionName: filter_ffhwk0e85ud_7h32hu3c5lx
+    isExtra: false
+    isNew: false
+    operator: NOT IN
+    operatorId: NOT_IN
+    sqlExpression: null
+    subject: account_number
+  order_by_cols: []
+  server_pagination: false
+  row_limit: 10
+  server_page_length: 10
+  order_desc: true
+  table_timestamp_format: smart_date
+  show_cell_bars: true
+  color_pn: true
+  column_config:
+    available_balance:
+      currencyFormat:
+        symbol: INR
+        symbolPosition: prefix
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 4
+query_context: '{"datasource":{"id":6,"type":"table"},"force":false,"queries":[{"filters":[{"col":"created_at","op":"TEMPORAL_RANGE","val":"No
+  filter"},{"col":"account_number","op":"NOT IN","val":["MOW_FS_ACC_1"]}],"extras":{"time_grain_sqla":"P1D","having":"","where":""},"applied_time_extras":{},"columns":["account_number","account_holder_name","available_balance"],"orderby":[],"annotation_layers":[],"row_limit":10,"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"post_processing":[]}],"form_data":{"datasource":"6__table","viz_type":"table","slice_id":13,"query_mode":"raw","groupby":[],"time_grain_sqla":"P1D","temporal_columns_lookup":{"created_at":true,"updated_at":true},"all_columns":["account_number","account_holder_name","available_balance"],"percent_metrics":[],"adhoc_filters":[{"clause":"WHERE","comparator":"No
+  filter","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_hudlkrcud1_5i4rcme32um","isExtra":false,"isNew":false,"operator":"TEMPORAL_RANGE","sqlExpression":null,"subject":"created_at"},{"clause":"WHERE","comparator":["MOW_FS_ACC_1"],"datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_ffhwk0e85ud_7h32hu3c5lx","isExtra":false,"isNew":false,"operator":"NOT
+  IN","operatorId":"NOT_IN","sqlExpression":null,"subject":"account_number"}],"order_by_cols":[],"server_pagination":false,"row_limit":10,"server_page_length":10,"order_desc":true,"table_timestamp_format":"smart_date","show_cell_bars":true,"color_pn":true,"column_config":{"available_balance":{"currencyFormat":{"symbol":"INR","symbolPosition":"prefix"}}},"conditional_formatting":[],"extra_form_data":{},"dashboards":[4],"force":false,"result_format":"json","result_type":"full","include_time":false},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 78bb99fc-f816-48fb-bbfb-c8dac28993a9
+version: 1.0.0
+dataset_uuid: 6494a5aa-d996-4e31-88dd-0bcac329aca3
