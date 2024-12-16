@@ -1,0 +1,25 @@
+slice_name: Registry Count
+description: null
+certified_by: null
+certification_details: null
+viz_type: big_number_total
+params:
+  datasource: 11__table
+  viz_type: big_number_total
+  slice_id: 28
+  metric: count
+  adhoc_filters: []
+  subheader: ''
+  header_font_size: 0.4
+  subheader_font_size: 0.15
+  y_axis_format: SMART_NUMBER
+  time_format: smart_date
+  conditional_formatting: []
+  extra_form_data: {}
+  dashboards:
+  - 17
+query_context: '{"datasource":{"id":11,"type":"table"},"force":false,"queries":[{"filters":[],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":[],"metrics":["count"],"annotation_layers":[],"series_limit":0,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{}}],"form_data":{"datasource":"11__table","viz_type":"big_number_total","slice_id":28,"metric":"count","adhoc_filters":[],"subheader":"","header_font_size":0.4,"subheader_font_size":0.15,"y_axis_format":"SMART_NUMBER","time_format":"smart_date","conditional_formatting":[],"extra_form_data":{},"dashboards":[17],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+cache_timeout: null
+uuid: 5f0b595c-8618-4b56-82e7-8903d2877b55
+version: 1.0.0
+dataset_uuid: c7aba30c-aedb-43da-b474-5b3458afd812

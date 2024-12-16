@@ -1,0 +1,60 @@
+table_name: Program payments
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "select program.name, sum(amount_paid) as paid_amount \nfrom \n\tg2p_payment\
+  \ as payment\n\tleft join g2p_entitlement as entitlement \n\t\ton payment.entitlement_id\
+  \ = entitlement.id\n\tleft join g2p_cycle as cycle\n\t\ton cycle.id = entitlement.cycle_id\n\
+  \tleft join g2p_program as \"program\" \n\t\ton \"program\".id = cycle.program_id\n\
+  \tleft join g2p_program_membership as membership\n\t\ton membership.partner_id =\
+  \ entitlement.partner_id\n\t\t\tand \"program\".id = membership.program_id\nwhere\n\
+  \tpayment.state = 'issued' and amount_paid is not null\ngroup by \n\tprogram.name\n\
+  \t\t\n\t"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: 73acec0d-8900-40e9-9933-46ce7a2dfba2
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: paid_amount
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: DECIMAL
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: name
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: eff0eca9-8277-4c7a-8fe9-82a6854e9923

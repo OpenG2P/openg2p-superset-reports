@@ -1,0 +1,72 @@
+table_name: SR Data
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: public
+sql: "SELECT \n  CASE \n    WHEN is_group <> true THEN 'Individiual'\n    ELSE\n \
+  \     case \n        when g2p_group_kind is null then 'Other Groups'\n        else\
+  \ g2p_group_kind.name\n      end\n  END as registrant_type,\n  CASE \n    WHEN res_partner.gender\
+  \ is NULL THEN 'Not Provided'\n    ELSE res_partner.gender\n  END as gender,\n \
+  \ CASE \n    when birthdate is null then null \n    ELSE  date_part('year', age\
+  \ (birthdate))\n  END as age\nFROM public.res_partner\n  LEFT JOIN g2p_group_kind\
+  \ on res_partner.kind = g2p_group_kind.id\nWHERE res_partner.is_registrant = True\
+  \ \nGROUP BY is_group, g2p_group_kind, g2p_group_kind.name, gender, birthdate"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: c7aba30c-aedb-43da-b474-5b3458afd812
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: {}
+  warning_text: null
+columns:
+- column_name: age
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: registrant_type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: gender
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: 2a86763c-4d2e-478d-bcbc-3359d80d374a

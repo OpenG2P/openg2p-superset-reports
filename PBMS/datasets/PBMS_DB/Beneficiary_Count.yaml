@@ -1,0 +1,71 @@
+table_name: Beneficiary Count
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "SELECT \n  COUNT(1) as Beneficiary_Count, \n  CASE \n    WHEN is_group <> true\
+  \ THEN 'Individiual'\n    ELSE g2p_group_kind.name\n  END as Beneficiary_Type,\n\
+  \  CASE \n    WHEN res_partner.gender is NULL THEN 'Not Provided'\n    ELSE res_partner.gender\n\
+  \  END as Gender\nFROM public.res_partner\n  LEFT JOIN g2p_group_kind on res_partner.kind\
+  \ = g2p_group_kind.id\nWHERE res_partner.id in (select partner_id from g2p_program_membership\
+  \ where state = 'enrolled') \nGROUP BY is_group, kind, g2p_group_kind.name, Gender"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: cd687fe9-75dd-4fdc-8d0e-3d2292ef24a1
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
+columns:
+- column_name: beneficiary_count
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: beneficiary_type
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+- column_name: gender
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: {}
+version: 1.0.0
+database_uuid: eff0eca9-8277-4c7a-8fe9-82a6854e9923
