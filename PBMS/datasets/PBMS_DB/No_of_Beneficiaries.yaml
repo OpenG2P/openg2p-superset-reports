@@ -1,0 +1,83 @@
+table_name: No of Beneficiaries
+main_dttm_col: null
+description: null
+default_endpoint: null
+offset: 0
+cache_timeout: null
+schema: null
+sql: "SELECT\n\tg2p_program.id,\n\tg2p_program.name as ProgramName,\n\tres_partner.gender\
+  \ as Gender,\n\tcount(g2p_program_membership.id) as Beneficiaries\n\t\nFROM  g2p_program\n\
+  \tLEFT JOIN g2p_program_membership\n\t\tON g2p_program_membership.program_id = g2p_program.id\n\
+  \tLEFT JOIN res_partner\n\t\tON g2p_program_membership.partner_id = res_partner.id\
+  \ and res_partner.is_company <> true and res_partner.is_group <> true\nWHERE\n\t\
+  g2p_program_membership.state = 'enrolled' or g2p_program_membership.state is null\n\
+  GROUP By\n\tg2p_program.id, g2p_program.name, res_partner.gender\nOrder By\n\tg2p_program.id"
+params: null
+template_params: null
+filter_select_enabled: true
+fetch_values_predicate: null
+extra: null
+normalize_columns: false
+always_filter_main_dttm: false
+uuid: d2445ec9-87f3-41ef-9757-4602c7f207dc
+metrics:
+- metric_name: count
+  verbose_name: COUNT(*)
+  metric_type: count
+  expression: COUNT(*)
+  description: null
+  d3format: null
+  currency: null
+  extra: null
+  warning_text: null
+columns:
+- column_name: beneficiaries
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: LONGINTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: id
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: INTEGER
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: programname
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+- column_name: gender
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: STRING
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  extra: null
+version: 1.0.0
+database_uuid: eff0eca9-8277-4c7a-8fe9-82a6854e9923

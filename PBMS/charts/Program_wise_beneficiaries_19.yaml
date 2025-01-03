@@ -1,0 +1,67 @@
+slice_name: Program wise beneficiaries
+description: null
+certified_by: null
+certification_details: null
+viz_type: echarts_timeseries_bar
+params:
+  datasource: 9__table
+  viz_type: echarts_timeseries_bar
+  slice_id: 19
+  x_axis: programname
+  time_grain_sqla: P1D
+  x_axis_sort_asc: true
+  x_axis_sort_series: name
+  x_axis_sort_series_ascending: true
+  metrics:
+  - expressionType: SQL
+    sqlExpression: 'SUM(beneficiaries) '
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: false
+    label: 'SUM(beneficiaries) '
+    optionName: metric_1il3f0sttjy_rcpz993w2yf
+  groupby: []
+  adhoc_filters: []
+  order_desc: true
+  row_limit: 1000
+  truncate_metric: true
+  show_empty_columns: true
+  comparison_type: values
+  annotation_layers: []
+  forecastPeriods: 10
+  forecastInterval: 0.8
+  orientation: horizontal
+  x_axis_title: ''
+  x_axis_title_margin: 15
+  y_axis_title: ''
+  y_axis_title_margin: 15
+  y_axis_title_position: Left
+  sort_series_type: sum
+  color_scheme: supersetColors
+  only_total: true
+  zoomable: false
+  show_legend: true
+  legendType: plain
+  legendOrientation: top
+  x_axis_time_format: smart_date
+  xAxisLabelRotation: 0
+  y_axis_format: SMART_NUMBER
+  logAxis: false
+  minorSplitLine: false
+  truncateXAxis: false
+  truncateYAxis: false
+  y_axis_bounds:
+  - null
+  - null
+  rich_tooltip: false
+  tooltipSortByMetric: false
+  tooltipTimeFormat: smart_date
+  extra_form_data: {}
+  dashboards:
+  - 5
+query_context: null
+cache_timeout: null
+uuid: 2f1dca76-8c4d-4a7a-b1e5-214332bb5901
+version: 1.0.0
+dataset_uuid: d2445ec9-87f3-41ef-9757-4602c7f207dc

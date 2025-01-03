@@ -1,0 +1,13 @@
+database_name: PBMS DB
+sqlalchemy_uri: postgresql+psycopg2://pbmsuser:XXXXXXXXXX@pbms-postgresql:5432/pbmsdb
+cache_timeout: null
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_file_upload: false
+extra:
+  allows_virtual_table_explore: true
+uuid: eff0eca9-8277-4c7a-8fe9-82a6854e9923
+version: 1.0.0

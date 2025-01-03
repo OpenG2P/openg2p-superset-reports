@@ -1,0 +1,62 @@
+slice_name: Beneficiary Types
+description: null
+certified_by: null
+certification_details: null
+viz_type: pie
+params:
+  datasource: 8__table
+  viz_type: pie
+  slice_id: 17
+  groupby:
+  - beneficiary_type
+  metric:
+    aggregate: SUM
+    column:
+      advanced_data_type: null
+      changed_on: '2024-09-18T14:09:24.184428'
+      column_name: beneficiary_count
+      created_on: '2024-09-18T14:09:24.184418'
+      description: null
+      expression: null
+      extra: '{"warning_markdown":null}'
+      filterable: true
+      groupby: true
+      id: 205
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: LONGINTEGER
+      type_generic: 0
+      uuid: bfea571d-2e38-4933-bf9a-578c2fd04bb4
+      verbose_name: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: SUM(beneficiary_count)
+    optionName: metric_fhff2jajutd_y614ehfkyrd
+    sqlExpression: null
+  adhoc_filters: []
+  row_limit: 100
+  sort_by_metric: true
+  color_scheme: supersetColors
+  show_labels_threshold: '10'
+  show_legend: true
+  legendType: plain
+  legendOrientation: bottom
+  label_type: key
+  number_format: .3s
+  date_format: smart_date
+  show_labels: true
+  labels_outside: true
+  outerRadius: 77
+  donut: true
+  innerRadius: 30
+  extra_form_data: {}
+  dashboards:
+  - 5
+  annotation_layers: []
+query_context: null
+cache_timeout: null
+uuid: 3135c93e-e24c-4486-b5e1-00cc21bec4ed
+version: 1.0.0
+dataset_uuid: cd687fe9-75dd-4fdc-8d0e-3d2292ef24a1
